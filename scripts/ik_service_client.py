@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Copyright (c) 2013-2015, Rethink Robotics
 # All rights reserved.
@@ -113,9 +113,9 @@ def ik_test(limb):
               (seed_str,))
         # Format solution into Limb API-compatible dictionary
         limb_joints = dict(zip(resp.joints[0].name, resp.joints[0].position))
-        print "\nIK Joint Solution:\n", limb_joints
-        print "------------------"
-        print "Response Message:\n", resp
+        print ("\nIK Joint Solution:\n", limb_joints)
+        print ("------------------")
+        print ("Response Message:\n", resp)
     else:
         print("INVALID POSE - No Valid Joint Solution Found.")
 

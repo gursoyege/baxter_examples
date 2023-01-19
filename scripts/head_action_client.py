@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Copyright (c) 2013-2015, Rethink Robotics
 # All rights reserved.
@@ -110,8 +110,8 @@ def main():
     hc.command(position=-1.0, velocity=0.4)
     hc.wait()
     hc.command(position=0.0, velocity=0.6)
-    print hc.wait()
-    print "Exiting - Head Action Test Example Complete"
+    print (hc.wait())
+    print ("Exiting - Head Action Test Example Complete")
 
 if __name__ == "__main__":
     main()

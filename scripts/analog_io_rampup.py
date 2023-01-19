@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Copyright (c) 2013-2015, Rethink Robotics
 # All rights reserved.
@@ -42,20 +42,20 @@ def test_interface(io_component='torso_fan'):
     rate = rospy.Rate(2)
 
     # start: 0.0
-    print b.state()
+    print (b.state())
 
     # ramp up
     for i in range(0, 101, 10):
         b.set_output(i)
-        print i
+        print (i)
         rate.sleep()
     # max: 100.0
-    print b.state()
+    print (b.state())
 
     # ramp down
     for i in range(100, -1, -10):
         b.set_output(i)
-        print i
+        print (i)
         rate.sleep()
     # (fans off)
     b.set_output(0)
